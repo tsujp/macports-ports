@@ -137,7 +137,9 @@ if {$subport eq "emacs-devel" || $subport eq "emacs-app-devel"} {
                     size    51762506
 
     patchfiles-append \
-                    patch-allow-powerpc-devel.diff
+                    patch-allow-powerpc-devel.diff \
+                    patch-fix-window-role.diff \
+                    patch-draw-better-stipples.diff \
 
     pre-configure {
         system -W ${worksrcpath} "sh ./autogen.sh"
