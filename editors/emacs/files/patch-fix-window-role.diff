@@ -1,0 +1,11 @@
+--- src/nsterm.m.orig
++++ src/nsterm.m
+@@ -8768,7 +8768,7 @@ - (id)accessibilityAttributeValue:(NSString *)attribute
+   NSTRACE ("[EmacsWindow accessibilityAttributeValue:]");
+ 
+   if ([attribute isEqualToString:NSAccessibilityRoleAttribute])
+-    return NSAccessibilityTextFieldRole;
++    return NSAccessibilityWindowRole;
+ 
+   if ([attribute isEqualToString:NSAccessibilitySelectedTextAttribute]
+       && curbuf && ! NILP (BVAR (curbuf, mark_active)))
