@@ -128,17 +128,27 @@ if {$subport eq "emacs-devel" || $subport eq "emacs-app-devel"} {
 
     # do not forget to check that configure hasn't introduce some suprises via
     # git diff [old]..[new] -- '**/configure.ac'
-    github.setup    emacs-mirror emacs d0b9d35fbf733adf747df7eb55d4e9f35b53bdbe
+    # github.setup    emacs-mirror emacs d00de6f166af77e686d0dd7a0d22fcf8f0e09f37
+    # github.setup    emacs-mirror emacs 9093a0f824d709af15a29da528259dbca30f5c29
+    github.setup    emacs-mirror emacs 1639ad2814ae100c9f878a1388eb9ffc9d208b07
     epoch           5
     # Upstream README or the same git diff on configure.ac above to retrieve `version`.
     version         31.0.50
-    revision        20250102
+    # revision        20250112
+    # revision        20250120
+    revision        20250204
 
     master_sites    ${github.master_sites}
 
-    checksums       rmd160  fea0acfcb9df5b4ef698c1ad5630b54396d81aef \
-                    sha256  73c35ced4de9d2fa5bcc0595ed8fa3f0f96dee6eecb9447f9145df9bda788443 \
-                    size    51850940
+    # checksums       rmd160  cb796f6e4cbd5227c4e5b3dabca6590c9607951a \
+    #                 sha256  84e2df70b57ab462e353344e7ec0dc121b733cd5af82454c3c2e87fcb0b5cd14 \
+        #                 size    51879805
+    # checksums       rmd160  c73801dc1246dcbe665131de8a16fb44d2393d95 \
+    #                 sha256  9e64e5e29dac3aae3bbbfdea7aff988a9dfef6c2cc37fe31069dbd7d44d769c7 \
+        #                 size    51897161
+    checksums           rmd160  e5857ca76abdf8ce0f5b25b2ef8d267a3944f7ff \
+                     sha256  31daaa10714b44567869e5273286f9a153bb77e1b58b3cc99b8645b4fa567107 \
+                     size    51852987
 
     patchfiles-append \
                     patch-allow-powerpc-devel.diff \
